@@ -1,0 +1,343 @@
+body,
+p,
+h1,
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: #e5dede;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1280px;
+  display: flex;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: row;
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 960px) {
+  .container {
+    flex-direction: row;
+    max-width: 740px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 530px) {
+  .container {
+    flex-direction: column;
+    max-width: 260px;
+  }
+}
+
+/* Nav */
+
+.nav {
+  background: #333333;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .nav {
+    max-height: 400px;
+  }
+  .menu {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 530px) {
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .logo .dropdown {
+    align-self: center;
+    justify-content: center;
+  }
+  .logo a {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+  .logo a img {
+    width: 80%;
+  }
+  .dropdown {
+    padding-left: 0px;
+  }
+  .menu {
+    display: flex;
+    padding: 20px 0 20px 0;
+    align-items: center;
+  }
+}
+
+/* Dropdown */
+.dropbtn {
+  color: #989898;
+  background: none;
+  padding: 10px;
+  font-size: 1.25em;
+  border: none;
+  cursor: pointer;
+  min-width: 100px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #adadad;
+  min-width: 100px;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #a3a3a3;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #5c5a5a;
+}
+
+ul {
+  list-style: none;
+  min-width: 100px;
+}
+li {
+  position: relative; /* Necessário para flutuar os submenus */
+}
+a {
+  color: #fff;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+ul li a:hover {
+  background-color: #5c5a5a;
+  color: #ffffff;
+}
+
+ul li ul {
+  display: none;
+}
+
+li:hover > ul {
+  display: block;
+}
+li ul {
+  position: absolute;
+  background-color: #d1caca;
+  left: 100%; /* Posiciona o menu filho ao lado do menu pai */
+  top: 0; /* Posiciona o menu filho no topo do menu pai */
+}
+
+/* Input */
+.input {
+  color: #989898;
+}
+
+.busca {
+  background: url(../img/lupa3-1.png) no-repeat center right;
+  padding: 5px;
+  border: none;
+  width: 20px;
+  cursor: pointer;
+  /* -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear; */
+}
+
+.busca:focus {
+  width: 150px;
+  border-bottom: solid 1px #fff;
+  outline: none;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul li:last-child {
+  padding-left: 30px;
+}
+
+.menu ul li a {
+  color: #989898;
+  font-size: 1.25em;
+}
+
+.menu ul li a:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+/* Main */
+
+.main-item {
+  padding: 20px 20px 0 0;
+}
+
+.item {
+  width: 590px;
+  height: 250px;
+  padding: 20px;
+  background: #f9f7f1;
+  flex-direction: column;
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .item {
+    width: 430px;
+  }
+}
+
+@media (max-width: 960px) {
+  .item {
+    width: 320px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-item {
+    padding: 20px 0 0 0;
+  }
+  .item {
+    width: 460px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 530px) {
+  .main-item {
+    padding: 20px 0 0 0;
+  }
+  .item {
+    width: 220px;
+    padding: 20px;
+  }
+}
+
+.item a {
+  align-self: center;
+  margin: auto;
+  color: #333333;
+}
+
+section:last-child {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #333333;
+}
+
+.historico {
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+  align-content: center;
+  flex: 1;
+}
+
+.historico h2 {
+  font-size: 1.25em;
+}
+
+/* Contato */
+
+.contato {
+  flex-direction: column;
+  display: flex;
+  margin: 0 auto 20px auto;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  border-top: 2px solid #333333;
+  flex: 1;
+}
+
+.contato a {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Página Contato */
+
+.pag-contato {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pag-contato textarea {
+  background-color: #c4c4c4;
+  border: none;
+  border-radius: 2px;
+  color: #000;
+}
+
+.contato-btn {
+  margin: 80px auto 20px auto;
+}
+
+.contato-btn button {
+  background: none;
+  cursor: pointer;
+  border: none;
+  padding: 15px;
+}
+
+/* Página Doações */
+
+.doacoes {
+  margin: 0 0 20px 0;
+}
